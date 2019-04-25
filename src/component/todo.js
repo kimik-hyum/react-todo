@@ -1,14 +1,15 @@
 import React from "react";
 
 class TodoList extends React.Component {
+    
     render () {
+        const {list} = this.props;
         return (
             <div className="list-area">
                 <ul>
-                    <li><span>할일 목록1</span> <button className="del">삭제</button><button className="edit">편집</button></li>
-                    <li><span>할일 목록2</span> <button className="del">삭제</button><button className="edit">편집</button></li>
-                    <li><span>할일 목록3</span> <button className="del">삭제</button><button className="edit">편집</button></li>
-                    <li><span>할일 목록4</span> <button className="del">삭제</button><button className="edit">편집</button></li>
+                    {list.length && list.map(({text,check},index) => 
+                        <li><span>{text}</span> <button className="del">삭제</button><button className="edit">편집</button></li>
+                    )}
                 </ul>
             </div>
         );

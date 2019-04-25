@@ -5,6 +5,15 @@ import TodoList from './component/todo';
 import './scss/App.scss';
 
 class ReactTodo extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      todo:[
+        {text:"할일목록1",check:false},
+        {text:"할일목록2",check:false}
+      ]
+    }
+  }
   render() {
     return (
       <div className="container">
@@ -12,7 +21,7 @@ class ReactTodo extends React.Component {
           <h1>React To do list</h1>
         </div>
         <TodoInput />
-        <TodoList />
+        <TodoList list={this.state.todo}/>
       </div>
     )
   }
