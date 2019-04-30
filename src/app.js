@@ -20,8 +20,11 @@ class ReactTodo extends React.Component {
         <div className="head-area">
           <h1>React To do list</h1>
         </div>
-        <TodoInput />
-        <TodoList list={this.state.todo}/>
+        <div className="content">
+          <TodoInput />
+          <TodoList list={this.state.todo}/>
+        </div>
+        
       </div>
     )
   }

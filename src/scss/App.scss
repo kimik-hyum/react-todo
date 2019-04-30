@@ -1,0 +1,20 @@
+* {margin:0; padding:0; list-style:none;}
+.container {
+    .head-area {background-color:skyblue; text-align: center;
+        h1 {color: #fff; font-size: 40px; padding:15px;}
+    }
+    .content {max-width:500px; margin:20px auto 0;}
+    .input-area {display:flex;
+        input {font-size: 20px; flex:5;line-height: 35px; height:35px; vertical-align: middle; box-sizing: border-box; padding: 3px;}
+        button {flex:1; margin-left: 10px;}
+    }
+    .list-area {margin: 15px 0;
+        ul {
+            li {display:flex; margin: 8px 0;
+                span {flex:6; line-height: 35px; vertical-align: middle; font-size: 20px;}
+                button {flex:2; margin-left: 10px;}
+            }
+        }
+    }
+    button {line-height: 35px; height:35px; box-sizing: border-box; border: 1px solid #ccc; text-align: center; color:#000; font-size: 20px; vertical-align: middle; padding: 0 15px}
+}
