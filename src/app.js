@@ -8,7 +8,7 @@ class ReactTodo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      input: '',
+      input:'',
       todo:[
         {text:"할일목록1",check:false},
         {text:"할일목록2",check:false}
@@ -28,10 +28,15 @@ class ReactTodo extends React.Component {
   handleCreate = () => {
     this.setState({
       input:'',
-      todo:todo.concat({
-        text:this.input,
+      todo:this.state.todo.concat({
+        text:this.state.input,
         check:false
       })
+    })
+  }
+  handleDelete = (index) => {
+    this.setState({
+      todo:this.state.todo.filter((_, i) => i !== index)
     })
   }
 
@@ -42,8 +47,8 @@ class ReactTodo extends React.Component {
           <h1>React To do list</h1>
         </div>
         <div className="content">
-          <TodoInput onInput={this.handleInput} onKey={this.handleKey} onCreate={this.handleCreate}/>
-          <TodoList list={this.state.todo}/>
+          <TodoInput onInput={this.handleInput} value={this.state.input} onKey={this.handleKey} onCreate={this.handleCreate}/>
+          <TodoList list={this.state.todo} onRemove={this.handleDelete}/>
         </div>
         
       </div>

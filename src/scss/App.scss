@@ -9,10 +9,10 @@
     }
     .list-area {
         ul {margin-top: 20px;}
-        li {list-style:none; font-size: 18px; display:flex; line-height: 45px; border-top: 1px solid #ddd;align-items: center; 
+        li {list-style:none; font-size: 18px; display:flex; line-height: 45px; border-top: 1px solid #ddd;align-items: center; min-height:46px;
             &:first-child {border-top:0;}
             span {flex-grow: 8; vertical-align: middle;}
-            button {flex-grow: 1;font-size: 18px;line-height: 30px; height:30px; border: 1px solid #ccc;margin-left: 10px; vertical-align: middle;  justify-content: center;}
+            button {flex-grow: 1;font-size: 18px;line-height: 30px; height:30px; border: 1px solid #ccc;margin-left: 10px; vertical-align: middle;  justify-content: center;min-width: 100px; max-width:100px;}
         }
     }
 } 
