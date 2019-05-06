@@ -1,7 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import TodoInput from './component/input';
-import TodoList from './component/todo';
 import './scss/App.scss';
 
 class ReactTodo extends React.Component {
@@ -11,8 +9,18 @@ class ReactTodo extends React.Component {
         <div className="head-area">
           <h1>React To do list</h1>
         </div>
-        <TodoInput />
-        <TodoList />
+        <div className="input-area">
+          <input type="text" text=""/>
+          <button>추가</button>
+        </div>
+        <div className="list-area">
+          <ul>
+            <li><span>할일 목록1</span> <button className="del">삭제</button><button className="edit">편집</button></li>
+            <li><span>할일 목록2</span> <button className="del">삭제</button><button className="edit">편집</button></li>
+            <li><span>할일 목록3</span> <button className="del">삭제</button><button className="edit">편집</button></li>
+            <li><span>할일 목록4</span> <button className="del">삭제</button><button className="edit">편집</button></li>
+          </ul>
+        </div>
       </div>
     )
   }
