@@ -4,7 +4,7 @@ import TodoInput from './component/input';
 import TodoList from './component/todo';
 import './scss/App.scss';
 if(localStorage.todo == 0 || localStorage.todo == undefined){
-  localStorage.setItem('todo', JSON.stringify([]));
+  localStorage.setItem('todo', JSON.stringify([{text:'아무것도 없으면 허전하니까',check:false,modify:false},{text:'뭐라도 채워놓겠습니다.',check:true,modify:false},{text:'자신의 todolist를 채워주세요.',check:false,modify:false}]));
 }
 class ReactTodo extends React.Component {
   constructor(props) {
