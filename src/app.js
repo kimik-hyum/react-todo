@@ -24,6 +24,11 @@ class ReactTodo extends React.Component {
       todo:this.state.todo.filter((_, i) => i !== index)
     })
   }
+  handleKey = (e,i) => {
+    if(e.key === 'Enter') {
+        i ? this.handleModify(i) : this.handleCreate()
+    }
+}
   handleCreate = () => {
     this.setState({
       input:'',
